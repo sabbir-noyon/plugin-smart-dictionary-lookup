@@ -1,10 +1,8 @@
 <?php 
 
-if ( !defined('ABSPATH' )) {
+if ( !defined( 'ABSPATH' )) {
     exit;
 }
-class SDL_Admin {
-
-
-
+final class SDL_Admin {
+    
 }
