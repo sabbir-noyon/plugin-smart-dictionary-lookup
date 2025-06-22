@@ -20,13 +20,13 @@ document.addEventListener('dblclick', function () {
 		.then(res => res.json())
 		.then(data => {
 			if (data.success) {
-				popup.textContent = data.data.definition;
+				popup.textContent = `Definition of '${selectedText}' : ${data.data.definition}`;
 			} else {
-				popup.textContent = 'Definition not found.';
+				popup.textContent = `Definition of '${selectedText}' : Definition not found.`;
 			}
 		})
 		.catch(() => {
-			popup.textContent = 'Error fetching definition.';
+			popup.textContent = `Definition of '${selectedText}' : Error fetching definition.`;
 		});
 	}
 });

@@ -90,6 +90,13 @@ class SDL_Core {
 	 * Output a hidden popup container in the footer.
 	 */
 	public function add_popup_container() {
-		echo '<div id="sdl-popup" style="display:none;"></div>';
+		echo '
+		
+		<div id="sdl-popup" area-live="polite" role="alert" style="display:none;">
+			<span id="sdl-popup-close" title="'. esc_attr__( 'Close', 'smart-dictionary-lookup' ) .' " > Close </span>
+			<div id="sdl-popup-content"> Loading... </div>
+		</div>
+		
+		';
 	}
 }
