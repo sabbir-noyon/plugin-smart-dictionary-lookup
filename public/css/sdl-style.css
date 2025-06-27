@@ -1,22 +1,73 @@
+/* Toast Popup - Light Mode */
 #sdl-popup {
     position: fixed;
     bottom: 80px;
     right: 20px;
-    background: #29292a;
-    color: #ffffff;
+    background: #fff;
+    color: #000;
     padding: 15px 20px;
-    border-radius: 20px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-    font-family: 'poppins', sans-serif;
-    font-size: 22px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    font-family: 'Poppins', sans-serif;
+    max-width: 400px;
+    border-left: 12px solid #3498db;
     z-index: 9999;
     display: none;
-    max-width: 500px;
-	border: 8px solid #5d9ebc;
-    
+    overflow-wrap: break-word;
+    box-sizing: border-box;
+    position: fixed;
 }
 
+/* Dark Mode Toast */
+body.dark-mode #sdl-popup {
+    background: #333;
+    color: #fff;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+    border-left: 12px solid #3498db;
+}
+
+/* Selected Text Styling */
+#sdl-popup .sdl-selected {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+body.dark-mode #sdl-popup .sdl-selected {
+    color: #fff;
+}
+
+/* Definition Text Styling */
+#sdl-popup .sdl-definition {
+    font-size: 20px;
+    color: #555;
+}
+
+body.dark-mode #sdl-popup .sdl-definition {
+    color: #ddd;
+}
+
+/* Close Button */
 #sdl-popup-close {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 28px;
+    background: none;
+    border: none;
+    color: #555;
+}
 
+body.dark-mode #sdl-popup-close {
+    color: #ddd;
+}
 
+#sdl-popup-close:hover {
+    color: #000;
+}
+
+body.dark-mode #sdl-popup-close:hover {
+    color: #fff;
 }
