@@ -1,35 +1,42 @@
 document.addEventListener('dblclick', function () {
     const selectedText = window.getSelection().toString().trim();
 
-    if (selectedText.length > 0) {
+    if (selectedText.length > 0 && sdl_vars.enable_popup) {
         const popup = document.getElementById('sdl-popup');
-        
-        // Create Close Button if not exists
-        if (!document.getElementById('sdl-popup-close')) {
-            const closeBtn = document.createElement('button');
-            closeBtn.id = 'sdl-popup-close';
-            closeBtn.innerHTML = '&times;';
-            closeBtn.addEventListener('click', () => {
-                popup.style.display = 'none';
-            });
-            popup.appendChild(closeBtn);
+        const wordText = popup.querySelector('.sdl-selected-word');
+        const definitionText = popup.querySelector('.sdl-definition-text');
+
+        // Set popup theme
+        popup.className = '';
+        popup.classList.add(sdl_vars.popup_theme === 'dark' ? 'sdl-popup-dark' : 'sdl-popup-light');
+
+        // Set popup position
+        popup.style.top = '';
+        popup.style.bottom = '';
+        popup.style.left = '';
+        popup.style.right = '';
+
+        switch (sdl_vars.popup_position) {
+            case 'top-left':
+                popup.style.top = '40px';
+                popup.style.left = '20px';
+                break;
+            case 'top-right':
+                popup.style.top = '40px';
+                popup.style.right = '20px';
+                break;
+            case 'bottom-left':
+                popup.style.bottom = '20px';
+                popup.style.left = '20px';
+                break;
+            default: // bottom-right
+                popup.style.bottom = '20px';
+                popup.style.right = '20px';
         }
 
-        popup.innerHTML = `
-            <div class="sdl-selected">${selectedText}</div>
-            <div class="sdl-definition">Searching definition...</div>
-        `;
-        
-        // Append close button again (keep after content)
-        const closeBtn = document.createElement('button');
-        closeBtn.id = 'sdl-popup-close';
-        closeBtn.innerHTML = '&times;';
-        closeBtn.addEventListener('click', () => {
-            popup.style.display = 'none';
-        });
-        popup.appendChild(closeBtn);
-
         popup.style.display = 'block';
+        wordText.textContent = selectedText;
+        definitionText.textContent = 'Searching...';
 
         // AJAX Request
         fetch(sdl_vars.ajax_url, {
@@ -44,16 +51,22 @@ document.addEventListener('dblclick', function () {
         })
         .then(res => res.json())
         .then(data => {
-            const definitionDiv = popup.querySelector('.sdl-definition');
             if (data.success) {
-                definitionDiv.textContent = data.data.definition;
+                definitionText.textContent = data.data.definition;
             } else {
-                definitionDiv.textContent = 'Definition not found.';
+                definitionText.textContent = 'Definition not found.';
             }
         })
         .catch(() => {
-            const definitionDiv = popup.querySelector('.sdl-definition');
-            definitionDiv.textContent = 'Error fetching definition.';
+            definitionText.textContent = 'Error fetching definition.';
         });
+    }
+});
+
+// Close button functionality
+document.addEventListener('click', function (e) {
+    if (e.target.classList.contains('sdl-close')) {
+        const popup = document.getElementById('sdl-popup');
+        popup.style.display = 'none';
     }
 });

@@ -94,7 +94,11 @@ class SDL_Core {
 	 */
 	public function add_popup_container() {
 		?>
-		<div id="sdl-popup" style="display:none;"></div>
+		<div id="sdl-popup" style="display: none;">
+    		<div class="sdl-selected-word"></div>
+    		<div class="sdl-definition-text"></div>
+    		<button class="sdl-close" aria-label="Close">&times;</button>
+		</div>
 		<?php
 		
 	

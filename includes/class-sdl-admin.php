@@ -72,7 +72,10 @@ final class SDL_Admin {
        
        ?>
         <div class="wrap">
-            <h1>Smart Dictionary Lookup Settings</h1>
+            <h1>
+                <img src="<?php echo SDL_URL . 'admin/images/main.png'; ?>" alt="Smart Dictionary Lookup" style="height: 70px; vertical-align: middle; margin-right: 10px; margin-top:-5px;">
+                Smart Dictionary Lookup Settings
+            </h1>
             <form action="options.php" method="post" >
                 <?php settings_fields( 'sdl_settings_group' ) ?>
                 <?php do_settings_sections( 'sdl_settings_group' ) ?>

@@ -1,73 +1,60 @@
-/* Toast Popup - Light Mode */
+/* Common Popup Styles */
 #sdl-popup {
     position: fixed;
-    bottom: 80px;
-    right: 20px;
-    background: #fff;
-    color: #000;
-    padding: 15px 20px;
-    border-radius: 12px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    font-family: 'Poppins', sans-serif;
     max-width: 400px;
-    border-left: 12px solid #3498db;
+    padding: 16px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     z-index: 9999;
     display: none;
-    overflow-wrap: break-word;
-    box-sizing: border-box;
-    position: fixed;
+    font-family: 'Poppins', sans-serif;
+    word-break: break-word;
 }
 
-/* Dark Mode Toast */
-body.dark-mode #sdl-popup {
-    background: #333;
-    color: #fff;
-    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+/* Light Mode */
+.sdl-popup-light {
+    background: #ffffff;
+    color: #333333;
     border-left: 12px solid #3498db;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Selected Text Styling */
-#sdl-popup .sdl-selected {
-    font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    color: #000;
+/* Dark Mode */
+.sdl-popup-dark {
+    background: #2f2f2f;
+    color: #eeeeee;
+    border-left: 12px solid #3498db;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
 }
 
-body.dark-mode #sdl-popup .sdl-selected {
-    color: #fff;
-}
-
-/* Definition Text Styling */
-#sdl-popup .sdl-definition {
+/* Selected Word Styling */
+#sdl-popup .sdl-selected-word {
     font-size: 20px;
-    color: #555;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: inherit;
 }
 
-body.dark-mode #sdl-popup .sdl-definition {
-    color: #ddd;
+/* Definition Styling */
+#sdl-popup .sdl-definition-text {
+    font-size: 16px;
+    color: inherit;
+    opacity: 0.85;
 }
 
-/* Close Button */
-#sdl-popup-close {
+/* Close Button Styling */
+#sdl-popup .sdl-close {
     position: absolute;
     top: 8px;
     right: 10px;
-    cursor: pointer;
-    font-size: 28px;
     background: none;
     border: none;
-    color: #555;
+    font-size: 20px;
+    color: inherit;
+    cursor: pointer;
+    line-height: 1;
 }
 
-body.dark-mode #sdl-popup-close {
-    color: #ddd;
-}
-
-#sdl-popup-close:hover {
-    color: #000;
-}
-
-body.dark-mode #sdl-popup-close:hover {
-    color: #fff;
+#sdl-popup .sdl-close:hover {
+    opacity: 0.7;
 }
