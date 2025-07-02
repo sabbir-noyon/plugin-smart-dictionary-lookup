@@ -52,6 +52,9 @@ class SDL_Core {
 			'sdl_vars',
 			[
 				'ajax_url' => admin_url( 'admin-ajax.php' ),
+				'enable_popup'   => get_option( 'sdl_enable_popup', 1 ),
+    			'popup_theme'    => get_option( 'sdl_popup_theme', 'light' ),
+    			'popup_position' => get_option( 'sdl_popup_position', 'bottom-right' ),
 			]
 		);
 	}
@@ -66,8 +69,8 @@ class SDL_Core {
 			wp_send_json_error( [ 'message' => 'No word provided.' ] );
 		}
 
-		// Call dictionary API.
-		$response = wp_remote_get( "https://api.dictionaryapi.dev/api/v2/entries/en/{$word}" );
+		$api_base = get_option( 'sdl_api_url', 'https://api.dictionaryapi.dev/api/v2/entries/en/' );
+		$response = wp_remote_get( $api_base . $word );
 
 		if ( is_wp_error( $response ) ) {
 			wp_send_json_error( [ 'message' => 'API request failed.' ] );
@@ -90,13 +93,10 @@ class SDL_Core {
 	 * Output a hidden popup container in the footer.
 	 */
 	public function add_popup_container() {
-		echo '
+		?>
+		<div id="sdl-popup" style="display:none;"></div>
+		<?php
 		
-		<div id="sdl-popup" area-live="polite" role="alert" style="display:none;">
-			<span id="sdl-popup-close" title="'. esc_attr__( 'Close', 'smart-dictionary-lookup' ) .' " > Close </span>
-			<div id="sdl-popup-content"> Loading... </div>
-		</div>
-		
-		';
+	
 	}
 }
