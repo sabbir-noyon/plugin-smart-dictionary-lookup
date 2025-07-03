@@ -2,7 +2,9 @@
 
 ![Smart Dictionary Lookup Banner](assets/banner.png)
 
-Smart, instant word definitions with a beautiful popup when users double-click text. Fully customizable, lightweight, and WordPress-friendly.
+**Smart, instant word definitions with a beautiful popup when users double-click text. Fully customizable, lightweight, and WordPress-friendly.**
+
+---
 
 ## 🎯 Features
 
@@ -15,27 +17,47 @@ Smart, instant word definitions with a beautiful popup when users double-click t
 - Admin settings page
 - Minimal, conflict-free styles
 
+---
+
 ## 🛠 Installation
 
-1. Upload the plugin to your `wp-content/plugins` directory or install via WordPress admin.
+1. Upload the plugin to your `wp-content/plugins` directory or install via the WordPress admin.
 2. Activate via the Plugins menu.
 3. Go to **Settings > Smart Dictionary Lookup** to customize.
 
+---
+
 ## 📸 Screenshots
 
-*Coming soon: Visual examples of popup and settings page*
+| Light Mode | Dark Mode | Settings Page |
+|:----------:|:---------:|:-------------:|
+| *Coming Soon* | *Coming Soon* | *Coming Soon* |
+
+---
 
 ## 💡 Notes
 
 - Uses free [dictionaryapi.dev](https://dictionaryapi.dev) by default.
 - You can replace the API URL with your own dictionary service.
-- Clean, lightweight, and designed for ease of use.
+- Lightweight, clean, and designed for ease of use.
+
+---
 
 ## 🚀 Future Plans
 
 - Alternative dictionary sources
 - Accessibility improvements
 - More UI themes
+- Mobile support
+
+---
+
+## 🧑‍💻 Development
+
+Want to contribute? PRs and feedback are welcome!  
+This plugin follows WordPress coding standards and is ideal for beginner plugin developers.
+
+---
 
 ## 📄 License
 
@@ -43,5 +65,4 @@ GPLv2 or later
 
 ---
 
-*Crafted with ❤️ for WordPress by Sabbir Noyon*
-
+**Crafted with ❤️ for WordPress by Sabbir Noyon**

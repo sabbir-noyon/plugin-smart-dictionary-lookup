@@ -1,7 +1,7 @@
 document.addEventListener('dblclick', function () {
     const selectedText = window.getSelection().toString().trim();
 
-    if (selectedText.length > 0 && sdl_vars.enable_popup) {
+    if (selectedText.length > 0 && sdl_vars.enable_popup ==="1") {
         const popup = document.getElementById('sdl-popup');
         const wordText = popup.querySelector('.sdl-selected-word');
         const definitionText = popup.querySelector('.sdl-definition-text');

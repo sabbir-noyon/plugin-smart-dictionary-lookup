@@ -5,7 +5,7 @@
  * Plugin URI:  https://wordpress.org/plugins/smart-dictionary-lookup
  * Version:     1.0.0
  * Author:      Sabbir Noyon
- * Author URI:  https://www.sabbir-noyon.com
+ * Author URI:  https://profiles.wordpress.org/sabbirnoyon/
  * Text Domain: smart-dictionary-lookup
  * Domain Path: /languages
  */

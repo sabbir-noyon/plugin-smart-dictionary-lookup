@@ -1,6 +1,7 @@
 === Smart Dictionary Lookup ===
 Contributors: your-wp.org-username
-Tags: dictionary, popup, double-click, definitions, smart lookup
+Donate link: 
+Tags: dictionary, popup, double-click, definitions, smart lookup, education, tooltip
 Requires at least: 5.0
 Tested up to: 6.5
 Stable tag: 1.0.0
@@ -14,50 +15,56 @@ Smart, instant word definitions with a beautiful popup when users double-click t
 
 **Smart Dictionary Lookup** enhances your WordPress site by providing quick, beautiful word definitions in a customizable popup when users double-click any word on the page.
 
-- Fetches definitions from a free, reliable dictionary API
-- Stylish popup with light/dark mode options
-- Customizable popup position (Top/Bottom, Left/Right)
-- Admin settings page for easy configuration
-- Option to enable/disable the popup
-- Clean, minimal UI inspired by modern toast designs
+**Features:**
 
-Perfect for blogs, educational websites, or any content-focused site where enhancing word understanding matters.
+✔ Fetches definitions from a free, reliable dictionary API  
+✔ Stylish popup with Light/Dark mode options  
+✔ Customizable popup position (Top/Bottom, Left/Right)  
+✔ Admin settings page for easy configuration  
+✔ Option to enable/disable the popup  
+✔ Clean, minimal UI inspired by modern toast designs  
+✔ Lightweight and conflict-free  
+
+Perfect for blogs, educational websites, content platforms, or any site where enhancing word understanding matters.
 
 == Installation ==
 
-1. Upload the plugin folder to the `/wp-content/plugins/` directory, or install via the WordPress admin.
-2. Activate the plugin through the 'Plugins' menu.
-3. Go to **Settings > Smart Dictionary Lookup** to configure options.
+1. Upload the plugin folder to the `/wp-content/plugins/` directory or install via the WordPress admin dashboard.
+2. Activate the plugin through the **Plugins** menu.
+3. Navigate to **Settings > Smart Dictionary Lookup** to configure options.
 
 == Screenshots ==
 
-1. Popup example (light mode)
-2. Popup example (dark mode)
-3. Admin Settings Page
+1. Popup example - Light Mode  
+2. Popup example - Dark Mode  
+3. Admin Settings Page  
 
 == Frequently Asked Questions ==
 
-= Can I change the dictionary source? =
+= Can I change the dictionary source? =  
 Yes, the API URL is configurable from the Settings page.
 
-= Can I disable the popup temporarily? =
-Absolutely, just uncheck the "Enable Popup" option in the settings.
+= Can I disable the popup temporarily? =  
+Absolutely. Just uncheck the "Enable Popup" option in the settings.
 
-= Is it compatible with all themes? =
+= Is it compatible with all themes? =  
 The plugin uses minimal, isolated styles to avoid conflicts, but testing on your specific theme is recommended.
+
+= Does it work on mobile? =  
+Currently optimized for desktop double-clicks. Future versions may add mobile support.
 
 == Changelog ==
 
-= 1.0.0 =
-* Initial release
-* Double-click popup with definition lookup
-* Admin Settings page
-* Light/Dark mode
-* Popup position options
+= 1.0.0 =  
+* Initial release  
+* Double-click popup with definition lookup  
+* Admin Settings page  
+* Light/Dark mode  
+* Popup position options  
 
 == Upgrade Notice ==
 
-= 1.0.0 =
+= 1.0.0 =  
 First public release of Smart Dictionary Lookup.
 
 == License ==

@@ -67,7 +67,7 @@ final class SDL_Admin {
 
         $api_url = esc_url( get_option( 'sdl_api_url', 'https://api.dictionaryapi.dev/api/v2/entries/en/' ) ) ;
         $enable_popup = get_option( 'sdl_enable_popup', 1 );
-        $popup_theme = sanitize_text_field( get_option( 'sdl_enable_theme', 'light' ) );
+        $popup_theme = sanitize_text_field( get_option( 'sdl_popup_theme', 'light' ) );
         $popup_position = sanitize_text_field( get_option( 'sdl_popup_position', 'bottom-right' ) );
        
        ?>
@@ -93,6 +93,7 @@ final class SDL_Admin {
                     <tr>
                         <th scope="row">Enable Popup</th>
                             <td>
+                                <input type="hidden" name="sdl_enable_popup" value="0">
                                 <input type="checkbox" name="sdl_enable_popup" value="1" <?php checked( $enable_popup, 1 ); ?>>
                                 <label>Show the Dictionary popup</label>
                             </td>
