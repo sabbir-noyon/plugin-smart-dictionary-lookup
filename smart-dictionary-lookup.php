@@ -1,14 +1,15 @@
 <?php
-/**
- * Plugin Name: Smart Dictionary Lookup
- * Description: A plugin that shows word definitions when double-clicked in post content using a public dictionary API.
- * Plugin URI:  https://wordpress.org/plugins/smart-dictionary-lookup
- * Version:     1.0.0
- * Author:      Sabbir Noyon
- * Author URI:  https://profiles.wordpress.org/sabbirnoyon/
- * Text Domain: smart-dictionary-lookup
- * Domain Path: /languages
- */
+/*
+Plugin Name: Smart Dictionary Lookup
+Plugin URI: https://wordpress.org/plugins/smart-dictionary-lookup
+Description: Smart, instant word definitions with a beautiful popup when users double-click text. Fully customizable, lightweight, and WordPress-friendly.
+Version: 1.0.0
+Author: Sabbir Noyon
+Author URI: https://profiles.wordpress.org/sabbirnoyon/
+License: GPLv2 or later
+License URI: https://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: smart-dictionary-lookup
+*/
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -27,8 +28,7 @@ final class Smart_Dictionary_Lookup {
 
 	public function __construct() {
 		$this->define_constants();
-		$this->load_textdomain();
-
+		
 		add_action( 'plugins_loaded', [ $this, 'init_plugin' ] );
 
 		// Register activation and deactivation hooks.
@@ -44,15 +44,6 @@ final class Smart_Dictionary_Lookup {
 		define( 'SDL_PATH', plugin_dir_path( __FILE__ ) );
 		define( 'SDL_URL', plugin_dir_url( __FILE__ ) );
 		define( 'SDL_ASSETS', plugin_dir_url( __FILE__ ) . 'assets/' );
-	}
-
-	// Load textdomain for translation
-	public function load_textdomain() {
-		load_plugin_textdomain(
-			'smart-dictionary-lookup',
-			false,
-			dirname( plugin_basename( __FILE__ ) ) . '/languages'
-		);
 	}
 
 	// Initialize plugin core classes
