@@ -27,14 +27,6 @@
 
 ---
 
-## 📸 Screenshots
-
-| Light Mode | Dark Mode | Settings Page |
-|:----------:|:---------:|:-------------:|
-| *Coming Soon* | *Coming Soon* | *Coming Soon* |
-
----
-
 ## 💡 Notes
 
 - Uses free [dictionaryapi.dev](https://dictionaryapi.dev) by default.
@@ -48,14 +40,13 @@
 - Alternative dictionary sources
 - Accessibility improvements
 - More UI themes
-- Mobile support
 
 ---
 
 ## 🧑‍💻 Development
 
 Want to contribute? PRs and feedback are welcome!  
-This plugin follows WordPress coding standards and is ideal for beginner plugin developers.
+This plugin follows WordPress coding standards.
 
 ---
 
