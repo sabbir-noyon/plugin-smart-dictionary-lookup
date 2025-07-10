@@ -13,8 +13,6 @@ final class SDL_Admin {
     public function __construct() {
         add_action( 'admin_menu', [ $this, 'sdl_add_admin_menu' ] );
         add_action( 'admin_init', [ $this, 'register_settings' ] );
-
-
     }
 
     /**
