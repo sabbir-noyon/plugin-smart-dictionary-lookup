@@ -43,7 +43,7 @@
 
 ---
 
-## 🧑‍💻 Development
+## 💻 Development
 
 Want to contribute? PRs and feedback are welcome!  
 This plugin follows WordPress coding standards.
