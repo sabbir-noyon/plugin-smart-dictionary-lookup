@@ -10,7 +10,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Class SDL_Core
+ * Class SDL_Core.
  *
  * Manages frontend scripts, styles, AJAX, and the popup markup.
  */
