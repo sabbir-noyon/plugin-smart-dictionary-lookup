@@ -8,52 +8,54 @@
 
 ## 🎯 Features
 
+- Fetches definitions from a free, reliable dictionary API
 - Quick word definitions on double-click
 - Clean, modern popup (toast-style)
 - Light/Dark mode options
-- Choose popup position (Top/Bottom, Left/Right)
-- API URL configurable
-- Easy enable/disable option
+- Customizable popup position (Top/Bottom, Left/Right)
+- Configurable API URL
 - Admin settings page
+- Easy enable/disable option
 - Minimal, conflict-free styles
 
 ---
 
 ## 🛠 Installation
 
-1. Upload the plugin to your `wp-content/plugins` directory or install via the WordPress admin.
-2. Activate via the Plugins menu.
-3. Go to **Settings > Smart Dictionary Lookup** to customize.
+1. Upload the plugin to your `wp-content/plugins` directory or install via the WordPress admin dashboard.
+2. Activate via the **Plugins** menu.
+3. Go to **Settings > Smart Dictionary Lookup** to configure options.
 
 ---
 
 ## 💡 Notes
 
-- Uses free [dictionaryapi.dev](https://dictionaryapi.dev) by default.
-- You can replace the API URL with your own dictionary service.
-- Lightweight, clean, and designed for ease of use.
+- By default, it uses [dictionaryapi.dev](https://dictionaryapi.dev)
+- You can replace the API URL with your own dictionary endpoint.
+- Fully compatible with modern WordPress setups.
+- Lightweight and optimized for performance.
 
 ---
 
-## 🚀 Future Plans
+## 🚀 Planned Features
 
-- Alternative dictionary sources
-- Accessibility improvements
-- More UI themes
+- Additional dictionary sources
+- More popup themes
+- Accessibility enhancements
 
 ---
 
 ## 💻 Development
 
-Want to contribute? PRs and feedback are welcome!  
-This plugin follows WordPress coding standards.
+Want to contribute? PRs and feedback are always welcome.  
+This plugin follows [WordPress Coding Standards](https://developer.wordpress.org/coding-standards/wordpress-coding-standards/).
 
 ---
 
 ## 📄 License
 
-GPLv2 or later
+This plugin is licensed under the [GPLv2 or later](https://www.gnu.org/licenses/gpl-2.0.html).
 
 ---
 
-**Crafted with ❤️ for WordPress by Sabbir Noyon**
+**Crafted with ❤️ for WordPress**

@@ -1,5 +1,5 @@
 === Smart Dictionary Lookup ===
-Contributors: your-wp.org-username
+Contributors: sabbirnoyon
 Donate link: 
 Tags: dictionary, popup, double-click, definitions, smart lookup, education, tooltip
 Requires at least: 5.0
@@ -51,7 +51,7 @@ Absolutely. Just uncheck the "Enable Popup" option in the settings.
 The plugin uses minimal, isolated styles to avoid conflicts, but testing on your specific theme is recommended.
 
 = Does it work on mobile? =  
-Currently optimized for desktop double-clicks. Future versions may add mobile support.
+Yes! The popup is fully responsive across mobile, tablet, and large displays.
 
 == Changelog ==
 

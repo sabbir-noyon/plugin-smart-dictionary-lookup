@@ -1,0 +1,80 @@
+/* -----------------------------------------------------------
+    Smart Dictionary Lookup - Admin Settings Page Styling
+   ----------------------------------------------------------- */
+
+/* Main wrapper for the title section */
+.smartdic-admin-title-wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	font-size: 24px;
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+
+/* Additional bottom spacing */
+.smartdic-admin-title-wrapper {
+	margin-bottom: 20px;
+}
+
+/* Inner container for image and heading text */
+.smartdic-admin-title-inner {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	gap: 10px;
+	font-size: 24px;
+	font-weight: 600;
+}
+
+/* Plugin logo size for desktop */
+.smartdic-admin-title-inner img {
+	height: 80px;
+}
+
+/* Title text block */
+.smartdic-admin-title-text {
+	display: inline-block;
+}
+
+/* --------------------
+    Responsive Styles
+   -------------------- */
+@media (max-width: 500px) {
+	.smartdic-admin-title-inner {
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+		font-size: 22px;
+		margin-left: 11% !important;
+	}
+
+	.smartdic-admin-title-inner img {
+		width: 35% !important;
+		height: auto !important;
+	}
+}
+
+/* -------------------------------
+    Tablet Portrait (361px–445px)
+   ------------------------------- */
+@media (max-width: 445px) and (min-width: 361px) {
+	.smartdic-admin-title-inner {
+		margin-left: 6% !important;
+	}
+
+	.smartdic-admin-title-inner img {
+		width: 32% !important;
+		height: auto !important;
+	}
+}
+
+/* ---------------
+    Small Mobile
+   --------------- */
+@media (max-width: 360px) {
+	.smartdic-admin-title-inner {
+		font-size: 17px;
+		margin-left: 9% !important;
+	}
+}

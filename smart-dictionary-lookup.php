@@ -11,60 +11,48 @@ License URI: https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain: smart-dictionary-lookup
 */
 
-if ( ! defined( 'ABSPATH' ) ) {
-	exit;
-}
+namespace sabbirnoyon\smartdictionarylookup;
 
-// Load plugin core classes
-require_once plugin_dir_path( __FILE__ ) . 'includes/class-sdl-core.php';
-require_once plugin_dir_path( __FILE__ ) . 'includes/class-sdl-admin.php';
+defined( 'ABSPATH' ) || exit;
+
+require_once plugin_dir_path( __FILE__ ) . 'includes/class-smartdic-core.php';
+require_once plugin_dir_path( __FILE__ ) . 'includes/class-smartdic-admin.php';
 
 /**
  * Main plugin class.
- * 
- * Initializes the Smart Dictionary Lookup plugin.
  */
 final class Smart_Dictionary_Lookup {
-
-	public function __construct() {
+		public function __construct() {
 		$this->define_constants();
-		
 		add_action( 'plugins_loaded', [ $this, 'init_plugin' ] );
 
-		// Register activation and deactivation hooks.
 		register_activation_hook( __FILE__, [ $this, 'on_activation' ] );
 		register_deactivation_hook( __FILE__, [ $this, 'on_deactivation' ] );
 	}
 
-	
-	 // Define plugin constants.
 	private function define_constants() {
-		define( 'SDL_VERSION', '1.0.0' );
-		define( 'SDL_FILE', __FILE__ );
-		define( 'SDL_PATH', plugin_dir_path( __FILE__ ) );
-		define( 'SDL_URL', plugin_dir_url( __FILE__ ) );
-		define( 'SDL_ASSETS', plugin_dir_url( __FILE__ ) . 'assets/' );
+		define( 'SMARTDIC_VERSION', '1.0.0' );
+		define( 'SMARTDIC_FILE', __FILE__ );
+		define( 'SMARTDIC_PATH', plugin_dir_path( __FILE__ ) );
+		define( 'SMARTDIC_URL', plugin_dir_url( __FILE__ ) );
+		define( 'SMARTDIC_ASSETS', plugin_dir_url( __FILE__ ) . 'assets/' );
 	}
 
-	// Initialize plugin core classes
 	public function init_plugin() {
 		if ( is_admin() ) {
-			new SDL_Admin(); // Admin area functionality
+			new \sabbirnoyon\smartdictionarylookup\SmartDIC_Admin();
 		}
 
-		new SDL_Core(); // Frontend functionality
+		new \sabbirnoyon\smartdictionarylookup\SmartDIC_Core();
 	}
 
-	// Plugin activation callback
 	public function on_activation() {
-		// For future, when need
+		// Future activation logic
 	}
 
-	// Plugin deactivation callback
 	public function on_deactivation() {
-		// For future, when need
+		// Future deactivation logic
 	}
 }
 
-// Boot the plugin
 new Smart_Dictionary_Lookup();

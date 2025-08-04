@@ -1,0 +1,147 @@
+/* -------------------------------------------
+	Smart Dictionary Lookup - Main Styling
+   ------------------------------------------- */
+
+/* Common Popup Styles */
+#smartdic-popup {
+	position: fixed;
+	max-width: 400px;
+	padding: 16px 20px;
+	border-radius: 12px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+	z-index: 9999;
+	display: none;
+	font-family: "Poppins", sans-serif;
+	word-break: break-word;
+	margin-top: 15px;
+}
+
+/* Light Mode */
+.smartdic-popup-light {
+	background: #ffffff;
+	color: #333333;
+	border-left: 12px solid #3498db;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Dark Mode */
+.smartdic-popup-dark {
+	background: #2f2f2f;
+	color: #eeeeee;
+	border-left: 12px solid #3498db;
+	box-shadow: 0 4px 12px rgba(255, 255, 255, 0.15);
+}
+
+/* Selected Word Styling */
+#smartdic-popup .smartdic-selected-word {
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 8px;
+	color: inherit;
+}
+
+/* Definition Styling */
+#smartdic-popup .smartdic-definition-text {
+	font-size: 16px;
+	color: inherit;
+	opacity: 0.85;
+}
+
+/* Close Button Styling */
+#smartdic-popup .smartdic-close {
+	position: absolute;
+	top: 8px;
+	right: 10px;
+	background: none;
+	border: none;
+	font-size: 20px;
+	color: inherit;
+	cursor: pointer;
+	line-height: 1;
+}
+
+#smartdic-popup .smartdic-close:hover {
+	opacity: 0.7;
+}
+
+/* ---------------------------------
+Responsive Smart Dictionary Popup
+------------------------------------ */
+
+/* Small mobile (up to 340px) */
+@media (max-width: 340px) {
+	#smartdic-popup {
+		width: 80%;
+		height: fit-content;
+		font-size: 15px;
+		padding: 12px;
+		bottom: 20px !important;
+		left: 5% !important;
+		right: 5% !important;
+		margin-top: 30px !important;
+	}
+
+	#smartdic-popup .smartdic-selected-word {
+		font-size: 17px;
+	}
+
+	#smartdic-popup .smartdic-definition-text {
+		font-size: 15px;
+	}
+
+	#smartdic-popup .smartdic-close {
+		font-size: 22px;
+		top: 5px;
+		right: 10px;
+	}
+}
+
+/* Mobile (341px - 550px) */
+@media (min-width: 341px) and (max-width: 550px) {
+	#smartdic-popup {
+		width: 75%;
+		height: fit-content;
+		font-size: 16px;
+		padding: 14px;
+		bottom: 30px !important;
+		left: 10% !important;
+		right: 10% !important;
+		margin-top: 30px !important;
+	}
+
+	#smartdic-popup .smartdic-selected-word {
+		font-size: 18px;
+	}
+
+	#smartdic-popup .smartdic-definition-text {
+		font-size: 16px;
+	}
+
+	#smartdic-popup .smartdic-close {
+		font-size: 24px;
+		top: 6px;
+		right: 10px;
+	}
+}
+
+/* 4K and very large screen (2560px and above) */
+@media (min-width: 2560px) {
+	#smartdic-popup {
+		font-size: 18px;
+		max-width: 1000px;
+		padding: 18px;
+		margin-right: 50px;
+	}
+
+	#smartdic-popup .smartdic-selected-word {
+		font-size: 20px;
+	}
+
+	#smartdic-popup .smartdic-definition-text {
+		font-size: 18px;
+	}
+
+	#smartdic-popup .smartdic-close {
+		font-size: 26px;
+	}
+}
